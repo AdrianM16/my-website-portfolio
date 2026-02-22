@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Adrian M. Anunciacion — BSIT student, web developer, and UI/UX enthusiast." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>About | Adrian M. Anunciacion</title>
+
+  <link rel="preload" href="css/styles-v2.css" as="style" />
+  <link rel="stylesheet" href="css/styles-v2.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="icon" href="assets/img/mylogo.png" type="image/png" />
+</head>
+
+<body class="page page-about">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="floating-nav" aria-label="Section navigation">
+    <div class="nav-dot" data-section="hero" data-label="About" aria-label="About section"></div>
+    <div class="nav-dot" data-section="skills" data-label="Skills" aria-label="Skills section"></div>
+    <div class="nav-dot" data-section="soft-skills" data-label="Soft Skills" aria-label="Soft Skills section"></div>
+    <div class="nav-dot" data-section="certifications" data-label="Certifications" aria-label="Certifications section"></div>
+  </nav>
+
+  <header class="top-navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/mylogo.png" alt="Logo" />
+    </a>
+
+    <nav class="nav-links" data-drawer aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-v2.html" class="nav-link active">About</a>
+      <a href="projects-v2.html" class="nav-link">Projects</a>
+      <a href="resume-v2.html" class="nav-link">Resume</a>
+      <a href="contact-v2.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+
+      <button class="menu-toggle" data-burger aria-expanded="false" aria-label="Open menu" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--about" id="hero">
+      <div class="hero-content hero-content--about">
+        <div class="hero-visual hero-visual--about fade-right">
+          <div class="avatar-container avatar-container--about">
+            <div class="avatar-inner avatar-inner--about">
+              <img
+                src="assets/img/Pp1.png"
+                alt="Adrian M. Anunciacion - BSIT Student"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-text hero-text--about fade-up">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Get to know me
+          </div>
+
+          <h1 class="hero-title">About Me</h1>
+
+          <p class="hero-subtitle">
+            <strong>BS Information Technology Student</strong>
+            • Web Development
+            • UI/UX Design
+          </p>
+
+          <div class="about-copy" data-about-copy>
+            <p class="hero-description">
+              Hi! I'm <strong>Adrian M. Anunciacion</strong>, a third-year BSIT student
+              (Major in Web Development) from Holy Angel University.
+              I enjoy building responsive front-end interfaces and creating clean UI wireframes in Figma.
+            </p>
+
+            <p class="hero-description">
+              I'm currently looking for an <strong>internship / OJT</strong> where I can sharpen my skills in
+              front-end development, accessibility, and modern UI patterns.
+              I'm also expanding my knowledge in <strong>MySQL</strong> and cloud fundamentals (<strong>AWS</strong>).
+            </p>
+          </div>
+
+          <button class="about-toggle" type="button" aria-expanded="false" data-about-toggle>
+            Read more
+          </button>
+
+          <div class="hero-actions">
+            <a href="resume-v2.html" class="btn btn-primary">
+              <span>View Resume</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+
+            <a href="projects-v2.html" class="btn btn-secondary">
+              <span>Explore Projects</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stats-header fade-up">
+          <h2 class="stats-title">What I Focus On</h2>
+          <p class="stats-subtitle">My areas of expertise and interests</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🎨</span>
+            <h3>Focus</h3>
+            <p>Front-end development + UI/UX fundamentals</p>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🛠️</span>
+            <h3>Tools</h3>
+            <p>VS Code, GitHub, Figma, Canva, WordPress</p>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">📖</span>
+            <h3>Currently Learning</h3>
+            <p>MySQL basics • AWS cloud fundamentals</p>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">❤️</span>
+            <h3>What I Care About</h3>
+            <p>Responsive layouts, clean UI, accessibility, and performance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">This Semester Goals</h2>
+          <p class="section-subtitle">My learning objectives for the current semester</p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">Goal 1</span>
+              </div>
+              <h3 class="project-title">Build More Projects</h3>
+              <p class="project-description">
+                Create more real projects with better documentation (screenshots + links).
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">Goal 2</span>
+              </div>
+              <h3 class="project-title">Improve JavaScript</h3>
+              <p class="project-description">
+                Strengthen JavaScript fundamentals and component-style UI patterns.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">Goal 3</span>
+              </div>
+              <h3 class="project-title">Learn Databases & Deployment</h3>
+              <p class="project-description">
+                Practice basic databases (MySQL) and deployment fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Front-end development with modern UI focus</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card fade-left">
+            <div class="skill-card-header">
+              <div class="skill-icon">🎨</div>
+              <h3 class="skill-card-title">Front-End Development</h3>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Responsive Web Design</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card fade-right">
+            <div class="skill-card-header">
+              <div class="skill-icon">🔧</div>
+              <h3 class="skill-card-title">Tools & Technologies</h3>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Node.js (Basics)</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">WordPress</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Git/GitHub</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Figma (Wireframing)</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section" id="soft-skills">
+      <div class="stats-container">
+        <div class="stats-header fade-up">
+          <h2 class="stats-title">Soft Skills</h2>
+          <p class="stats-subtitle">Personal qualities that help me succeed</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🧩</span>
+            <div class="stat-number">Problem Solving</div>
+            <div class="stat-label">Break tasks into steps and iterate quickly</div>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🔄</span>
+            <div class="stat-number">Adaptability</div>
+            <div class="stat-label">Comfortable learning new tools and workflows</div>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🤝</span>
+            <div class="stat-number">Team Collaboration</div>
+            <div class="stat-label">Communicates clearly in group projects</div>
+          </div>
+
+          <div class="stat-item fade-up">
+            <span class="stat-icon">💬</span>
+            <div class="stat-number">Communication</div>
+            <div class="stat-label">Writes clean documentation and updates</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© <span id="year"></span> Adrian M. Anunciacion. All rights reserved.</p>
+
+      <div class="footer-socials">
+        <a
+          href="https://github.com/AdrianM16"
+          target="_blank"
+          aria-disabled="true"
+          class="footer-social"
+          title="GitHub"
+          aria-label="GitHub"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .1-1.5-.5-2 2-.2 4-1 4-4.5 0-1-.4-2-1-2.5.1-.3.5-1.5-.1-3 0 0-1-.3-3.4 1.3-1-.3-2.1-.4-3-.4s-2 .1-3 .4C5.6 5.7 4.6 6 4.6 6c-.6 1.5-.2 2.7-.1 3C4 9.5 3.6 10.5 3.6 11.5c0 3.5 2 4.3 4 4.5-.4.4-.6 1-.5 2V21" />
+          </svg>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/adrian-anunciacion-b51913316/"
+          target="_blank"
+          rel="noreferrer"
+          class="footer-social"
+          title="Linkedin"
+          aria-label="LinkedIn"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=adriananunciacion80@gmail.com"
+          class="footer-social"
+          target="_blank"
+          title="Email"
+          aria-label="Email"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const navDots = document.querySelectorAll('.nav-dot');
+    const sections = document.querySelectorAll('section[id]');
+
+    const updateActiveDot = () => {
+      if (!navDots.length || !sections.length) return;
+      let currentSection = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navDots.forEach(dot => {
+        dot.classList.toggle('active', dot.getAttribute('data-section') === currentSection);
+      });
+    };
+
+    navDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const sectionId = dot.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    const fadeElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+    const handleScrollAnimations = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - 100) element.classList.add('is-visible');
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      updateActiveDot();
+      handleScrollAnimations();
+    });
+
+    window.addEventListener('load', () => {
+      updateActiveDot();
+      handleScrollAnimations();
+    });
+
+    const aboutCopy = document.querySelector('[data-about-copy]');
+    const aboutToggle = document.querySelector('[data-about-toggle]');
+
+    if (aboutCopy && aboutToggle) {
+      aboutToggle.addEventListener('click', () => {
+        const open = aboutCopy.classList.toggle('is-open');
+        aboutToggle.textContent = open ? 'Read less' : 'Read more';
+        aboutToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  </script>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

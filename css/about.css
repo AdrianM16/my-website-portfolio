@@ -1,0 +1,260 @@
+/* =========================
+   [12] About Page (Scoped)
+========================= */
+.page-about .hero.hero--about{
+  padding: 110px 5% 40px; /* dagdag top space */
+}
+
+.page-about .hero-content--about{
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.page-about .avatar-container--about{
+  max-width: 380px;
+  filter: none;
+}
+
+.page-about .avatar-inner--about{
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid rgba(139, 92, 246, 0.22);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.08),
+    rgba(236, 72, 153, 0.06)
+  );
+  box-shadow:
+    0 14px 34px rgba(15, 15, 26, 0.10),
+    0 0 0 1px rgba(255,255,255,0.06) inset;
+}
+
+.page-about .avatar-inner--about::before{
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 40px;
+  background: radial-gradient(circle at 25% 20%,
+    rgba(139, 92, 246, 0.30),
+    rgba(236, 72, 153, 0.14),
+    transparent 62%
+  );
+  filter: blur(16px);
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-about .avatar-inner--about::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.10),
+    transparent 45%,
+    rgba(139, 92, 246, 0.06)
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.page-about .avatar-inner--about img{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.02);
+  filter: contrast(1.02) saturate(1.03);
+}
+
+.page-about .about-copy{ margin-top: 8px; }
+
+.page-about .about-copy .hero-description{
+  margin-bottom: 14px;
+  max-width: 640px;
+}
+
+.page-about .hero.hero--about .hero-title{
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  margin-bottom: 14px;
+}
+
+/* Tablet */
+@media (max-width: 980px){
+  .page-about .hero-content--about{
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  /* override global .hero-text/.hero-visual ordering */
+  .page-about .hero-text--about{ order: 0 !important; }
+  .page-about .hero-visual--about{
+    order: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .page-about .avatar-container--about{
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .page-about .hero.hero--about{ padding: 92px 7% 44px; }
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .page-about .hero.hero--about{
+    padding: 84px 5% 34px;
+  }
+
+  /* make the "card" centered like your desired screenshot */
+  .page-about .hero-content.hero-content--about{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-inline: auto !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    align-items: start !important;
+
+    padding: 18px !important;
+    border-radius: 22px !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+    background: linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.02)) !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,.18) !important;
+
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  /* Mobile: hide photo */
+  .page-about .hero-visual--about{ display: none !important; }
+
+  /* override global responsive rules that change ordering & alignment */
+  .page-about .hero-text--about{
+    order: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .page-about .hero-badge{
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+
+  .page-about .hero.hero--about .hero-title{
+    font-size: 2.55rem !important; /* closer to your desired look */
+    line-height: 1.05;
+    margin: 0 0 8px 0;
+  }
+
+  .page-about .hero-subtitle{
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0 auto 12px;
+    max-width: 44ch;
+  }
+
+  /* smoother read more fade */
+  .page-about .about-copy{
+    margin-top: 6px;
+    position: relative;
+
+    max-height: 162px;
+    overflow: hidden;
+
+    text-align: center;
+    max-width: 56ch;
+    margin-inline: auto;
+
+    padding-bottom: 26px;
+  }
+
+  .page-about .about-copy::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height: 72px;
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 15, 26, 0) 0%,
+      rgba(15, 15, 26, 0.55) 55%,
+      rgba(15, 15, 26, 0.92) 100%
+    );
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    pointer-events:none;
+  }
+
+  .page-about .about-copy.is-open{
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  .page-about .about-copy.is-open::after{ display:none; }
+
+  .page-about .about-copy .hero-description{
+    margin-bottom: 10px;
+    max-width: none;
+    line-height: 1.65;
+    font-size: 0.97rem;
+  }
+
+  .page-about .about-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.05);
+    color: var(--text);
+    font-weight: 800;
+    font-size: .95rem;
+  }
+
+  /* ✅ IMPORTANT: make buttons full width (override global) */
+  .page-about .hero-actions{
+    width: 100% !important;
+    max-width: 420px !important;
+    margin-inline: auto !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+
+    margin-top: 12px !important;
+    justify-content: stretch !important;
+  }
+
+  .page-about .hero-actions .btn{
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  /* light theme fade */
+  :root[data-theme="light"] .page-about .about-copy::after{
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.70) 55%,
+      rgba(255,255,255,0.96) 100%
+    );
+  }
+}

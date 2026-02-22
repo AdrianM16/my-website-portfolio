@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog by Adrian M. Anunciacion — thoughts on web development, design, and technology." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>Blog | Adrian M. Anunciacion</title>
+
+  <link rel="preload" href="css/styles-v2.css" as="style" />
+  <link rel="stylesheet" href="css/styles-v2.css" />
+  <link rel="icon" href="assets/img/mylogo.png" type="image/png" />
+</head>
+<body class="page page-blog">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Floating Navigation Dots -->
+  <nav class="floating-nav" aria-label="Section navigation">
+    <div class="nav-dot" data-section="hero" data-label="Blog" aria-label="Blog section"></div>
+  </nav>
+
+  <!-- Top Navbar -->
+  <header class="top-navbar">
+    <a href="index.html" class="nav-brand">
+        <img src="assets/img/mylogo.png" alt="Logo" />
+    </a>
+
+    <nav class="nav-links" data-drawer aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-v2.html" class="nav-link">About</a>
+      <a href="projects-v2.html" class="nav-link">Projects</a>
+      <a href="resume-v2.html" class="nav-link">Resume</a>
+      <a href="contact-v2.html" class="nav-link">Contact</a>
+      <a href="blog-v2.html" class="nav-link active">Blog</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      
+      <button class="menu-toggle" data-burger aria-expanded="false" aria-label="Open menu" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-text fade-up">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Notes & learning
+          </div>
+          
+          <h1 class="hero-title">
+            My Blog
+          </h1>
+          
+          <p class="hero-subtitle">
+            Thoughts, tutorials, and insights on web development
+          </p>
+          
+          <p class="hero-description">
+            Welcome to my blog where I share my learning journey, tutorials, 
+            and thoughts on web development, design, and technology. 
+            I'm constantly learning and documenting my progress.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="contact-v2.html" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>Suggest a Topic</span>
+            </a>
+            
+            <a href="projects-v2.html" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              <span>View My Work</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stats-header fade-up">
+          <h2 class="stats-title">Coming Soon</h2>
+          <p class="stats-subtitle">What you can expect from this blog</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-item fade-up">
+            <span class="stat-icon">📚</span>
+            <h3>Tutorials</h3>
+            <p>Step-by-step guides on web development concepts and techniques</p>
+          </div>
+          
+          <div class="stat-item fade-up">
+            <span class="stat-icon">💡</span>
+            <h3>Tips & Tricks</h3>
+            <p>Practical tips and best practices I've learned along the way</p>
+          </div>
+          
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🔍</span>
+            <h3>Case Studies</h3>
+            <p>Detailed breakdowns of my projects and problem-solving approaches</p>
+          </div>
+          
+          <div class="stat-item fade-up">
+            <span class="stat-icon">🌱</span>
+            <h3>Learning Journey</h3>
+            <p>Documenting my progress as I learn new technologies and skills</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="projects-section">
+      <div class="section-container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Topics I'll Cover</h2>
+          <p class="section-subtitle">Areas of focus for upcoming blog posts</p>
+        </div>
+        
+        <div class="projects-grid">
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">Front-End</span>
+              </div>
+              <h3 class="project-title">HTML, CSS & JavaScript</h3>
+              <p class="project-description">
+                Tutorials and tips on building responsive, accessible websites 
+                using core web technologies. From fundamentals to advanced techniques.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">Design</span>
+              </div>
+              <h3 class="project-title">UI/UX Design</h3>
+              <p class="project-description">
+                Insights into user interface design, user experience principles, 
+                and using tools like Figma for wireframing and prototyping.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card fade-up">
+            <div class="project-content">
+              <div class="project-tag-group">
+                <span class="project-tag">CMS</span>
+              </div>
+              <h3 class="project-title">WordPress Development</h3>
+              <p class="project-description">
+                Working with WordPress CMS, custom themes, Elementor, and 
+                creating dynamic websites with content management systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="contact-section">
+      <div class="contact-wrapper fade-up">
+        <h2 class="section-title">Stay Updated</h2>
+        <p class="contact-text">
+          I'm working on creating content for this blog. Subscribe to get notified 
+          when new posts are published!
+        </p>
+        
+        <div class="contact-actions">
+          <a href="contact-v2.html" class="contact-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>Contact Me for Updates</span>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/adrian-anunciacion-b51913316/" target="_blank" rel="noreferrer" class="contact-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            <span>Follow on LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© <span id="year"></span> Adrian M. Anunciacion. All rights reserved.</p>
+      
+      <div class="footer-socials">
+        <a href="https://github.com/AdrianM16" target="_blank" aria-disabled="true" class="footer-social" title="GitHub" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .1-1.5-.5-2 2-.2 4-1 4-4.5 0-1-.4-2-1-2.5.1-.3.5-1.5-.1-3 0 0-1-.3-3.4 1.3-1-.3-2.1-.4-3-.4s-2 .1-3 .4C5.6 5.7 4.6 6 4.6 6c-.6 1.5-.2 2.7-.1 3C4 9.5 3.6 10.5 3.6 11.5c0 3.5 2 4.3 4 4.5-.4.4-.6 1-.5 2V21"/>
+          </svg>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/adrian-anunciacion-b51913316/" target="_blank" rel="noreferrer" class="footer-social" title="Linkedin" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adriananunciacion80@gmail.com" class="footer-social" target="_blank" title="Email" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Floating navigation functionality
+    const navDots = document.querySelectorAll('.nav-dot');
+    const sections = document.querySelectorAll('section[id]');
+
+    const updateActiveDot = () => {
+      if (!navDots.length || !sections.length) return;
+      let currentSection = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navDots.forEach(dot => {
+        dot.classList.toggle('active', dot.getAttribute('data-section') === currentSection);
+      });
+    };
+
+    navDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const sectionId = dot.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Scroll animations for elements hidden by default (fade-up/left/right)
+    const fadeElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+
+    const handleScrollAnimations = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - 100) element.classList.add('is-visible');
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      updateActiveDot();
+      handleScrollAnimations();
+    });
+
+    window.addEventListener('load', () => {
+      updateActiveDot();
+      handleScrollAnimations();
+    });
+  </script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

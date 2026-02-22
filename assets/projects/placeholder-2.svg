@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4f8cff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#49d6ff" stop-opacity=".25"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="rgba(255,255,255,.22)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" rx="48" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1128" height="603" rx="36" fill="rgba(0,0,0,.22)" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
+  <rect x="36" y="36" width="1128" height="603" rx="36" fill="url(#dots)" opacity=".45"/>
+  <path d="M110 520c80-140 210-230 350-230s240 60 340 180 160 150 250 150" fill="none" stroke="rgba(255,255,255,.58)" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="250" cy="260" r="40" fill="rgba(255,255,255,.65)"/>
+  <text x="90" y="120" fill="rgba(255,255,255,.85)" font-size="44" font-family="ui-sans-serif,system-ui" font-weight="700">Add your project screenshot</text>
+  <text x="90" y="170" fill="rgba(255,255,255,.7)" font-size="26" font-family="ui-sans-serif,system-ui">Replace this file in /assets/projects/</text>
+</svg>

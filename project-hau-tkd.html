@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project details for HAU Taekwondo Team Website." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>HAU Taekwondo Team Website | Adrian M. Anunciacion</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Project specific style -->
+  <link rel="stylesheet" href="css/hau-taekwondo.css" />
+
+  <link rel="icon" href="assets/img/mylogo.png" type="image/png" />
+</head>
+
+<body class="project-page">
+
+  <header class="project-header">
+    <a href="projects-v2.html" class="back-link">← Back to Projects</a>
+  </header>
+
+  <main id="main" class="project-main">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-card">
+
+        <div class="project-hero-top">
+          <div>
+            <h1 class="project-title">
+              HAU Taekwondo Team Website
+            </h1>
+
+            <p class="project-subtitle">
+              Responsive informational site with clear structure and user-friendly navigation.
+            </p>
+
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn primary"
+               href="https://adrianm16.github.io/HAUTKDwebsite/"
+               target="_blank">Live Demo ↗</a>
+
+            <a class="btn ghost"
+               href="projects-v2.html">Back</a>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <p>
+            This project presents program details, training categories,
+            mission, and media content in a clean layout.
+          </p>
+          <p>
+            I focused on navigation clarity, responsive sections,
+            and consistent spacing so the content stays readable
+            on any device.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="project-section">
+      <h2>Screenshots</h2>
+
+      <div class="project-grid">
+        <div class="project-img">
+          <img src="assets/projects/hau-cover.svg" alt="Project cover">
+        </div>
+        <div class="project-img">
+          <img src="assets/projects/hau-1.svg" alt="Interface preview">
+        </div>
+        <div class="project-img">
+          <img src="assets/projects/hau-2.svg" alt="Mobile layout">
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNINGS -->
+    <section class="project-section">
+      <div class="project-card">
+        <h2>What I Learned</h2>
+        <ul>
+          <li>How to structure semantic HTML sections.</li>
+          <li>How to design consistent navigation systems.</li>
+          <li>How to maintain readability across devices.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="project-footer">
+    © <span id="year"></span> Adrian M. Anunciacion
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

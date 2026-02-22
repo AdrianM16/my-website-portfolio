@@ -1,0 +1,181 @@
+/* ==================================================
+   Brew Haven Project Page Styles
+   Scoped to .project-page
+================================================== */
+
+.project-page {
+  background: #0f0f1a;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+/* Soft gradient background like v2 */
+.project-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(139,92,246,.25), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(6,182,212,.18), transparent 40%);
+  z-index: -1;
+}
+
+/* Header */
+.project-header {
+  padding: 24px 8%;
+}
+
+.back-link {
+  color: #8b5cf6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+.project-main {
+  padding: 20px 8% 80px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Hero card */
+.project-card {
+  border-radius: 28px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+/* Top hero flex */
+.project-hero-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.project-subtitle {
+  margin: 10px 0 0;
+  color: rgba(255,255,255,.7);
+}
+
+/* Tags */
+.project-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(139,92,246,.15);
+  border: 1px solid rgba(139,92,246,.25);
+  color: #8b5cf6;
+}
+
+/* Buttons */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn.ghost {
+  border: 1px solid rgba(255,255,255,.2);
+  color: #fff;
+}
+
+/* Description */
+.project-description {
+  margin-top: 20px;
+  color: rgba(255,255,255,.75);
+  line-height: 1.7;
+}
+
+/* Section */
+.project-section {
+  margin-top: 60px;
+}
+
+.project-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Image grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-img {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.05);
+}
+
+.project-img img {
+  width: 100%;
+  display: block;
+}
+
+/* Footer */
+.project-footer {
+  padding: 40px;
+  text-align: center;
+  color: rgba(255,255,255,.5);
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-top {
+    flex-direction: column;
+  }
+
+  .project-actions {
+    margin-top: 16px;
+  }
+}

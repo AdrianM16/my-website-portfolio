@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project details for Brew Haven — Coffee Shop Web Application." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>Brew Haven — Coffee Shop Web Application | Adrian M. Anunciacion</title>
+
+  <!-- Main global styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Project-specific style -->
+  <link rel="stylesheet" href="css/brew-haven.css" />
+
+  <link rel="icon" href="assets/img/mylogo.png" type="image/png" />
+</head>
+
+<body class="project-page">
+
+  <header class="project-header">
+    <a href="projects-v2.html" class="back-link">← Back to Projects</a>
+  </header>
+
+  <main id="main" class="project-main">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-card">
+
+        <div class="project-hero-top">
+          <div>
+            <h1 class="project-title">
+              Brew Haven — Coffee Shop Web Application
+            </h1>
+
+            <p class="project-subtitle">
+              Responsive coffee shop web app with menu display and cart features.
+            </p>
+
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Node.js (Basics)</span>
+            </div>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn primary"
+               href="https://adrianm16.github.io/BrewHavenCoffee/"
+               target="_blank">Live Demo ↗</a>
+
+            <a class="btn ghost"
+               href="projects-v2.html">Back</a>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <p>
+            This web application showcases a menu, product listing,
+            and cart interactions.
+          </p>
+          <p>
+            I practiced responsive UI patterns and basic backend concepts
+            while keeping the interface simple and user-friendly.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="project-section">
+      <h2>Screenshots</h2>
+
+      <div class="project-grid">
+        <div class="project-img">
+          <img src="assets/projects/brew-cover.svg" alt="Project cover">
+        </div>
+        <div class="project-img">
+          <img src="assets/projects/brew-1.svg" alt="Interface preview">
+        </div>
+        <div class="project-img">
+          <img src="assets/projects/brew-2.svg" alt="Mobile layout">
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNINGS -->
+    <section class="project-section">
+      <div class="project-card">
+        <h2>What I Learned</h2>
+        <ul>
+          <li>How to structure semantic HTML sections.</li>
+          <li>How to build responsive layouts.</li>
+          <li>How to add smooth transitions while keeping accessibility in mind.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="project-footer">
+    © <span id="year"></span> Adrian M. Anunciacion
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

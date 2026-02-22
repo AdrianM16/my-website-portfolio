@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Adrian M. Anunciacion — get in touch for web development projects and collaboration." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>Contact | Adrian M. Anunciacion</title>
+
+  <link rel="preload" href="css/styles-v2.css" as="style" />
+  <link rel="stylesheet" href="css/styles-v2.css" />
+
+  <link rel="preload" href="css/contact-v2.css" as="style" />
+  <link rel="stylesheet" href="css/contact-v2.css" />
+
+  <link rel="icon" href="assets/img/mylogo.png" type="image/png" />
+</head>
+
+<body class="page page-contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="floating-nav" aria-label="Section navigation">
+    <div class="nav-dot active" data-section="contact-hero" data-label="Contact" aria-label="Contact section"></div>
+  </nav>
+
+  <header class="top-navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/mylogo.png" alt="Logo" />
+    </a>
+
+    <nav class="nav-links" data-drawer aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-v2.html" class="nav-link">About</a>
+      <a href="projects-v2.html" class="nav-link">Projects</a>
+      <a href="resume-v2.html" class="nav-link">Resume</a>
+      <a href="contact-v2.html" class="nav-link active">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+
+      <button class="menu-toggle" data-burger aria-expanded="false" aria-label="Open menu" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="contact-hero" id="contact-hero">
+      <div class="contact-hero__inner">
+        <div class="contact-hero__text fade-up">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Let's connect
+          </div>
+
+          <h1 class="contact-hero__title">Send me a message</h1>
+
+          <p class="contact-hero__subtitle">
+            For internship / OJT, collaborations, or simple inquiries.
+          </p>
+
+          <p class="contact-hero__desc">
+            I usually reply within 24–48 hours. If it’s urgent, email is the best way to reach me.
+          </p>
+
+          <div class="contact-hero__mini">
+            <a
+              class="contact-mini"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=adriananunciacion80@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              title="Email"
+            >
+              <span class="contact-mini__icon">
+                <img src="assets/img/email.png" alt="Email logo" />
+              </span>
+              <span>Email</span>
+            </a>
+
+            <a
+              class="contact-mini"
+              href="https://www.linkedin.com/in/adrian-anunciacion-b51913316/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <span class="contact-mini__icon" aria-hidden="true">
+                <img src="assets/img/linkedin.png" alt="" />
+              </span>
+              <span>LinkedIn</span>
+            </a>
+
+            <a class="contact-mini" href="resume-v2.html" aria-label="Resume">
+              <span class="contact-mini__icon" aria-hidden="true">
+                <img src="assets/img/resume.png" alt="" />
+              </span>
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-hero__card fade-right" id="contact-form">
+          <div class="contact-card">
+            <div class="contact-card__head">
+              <div class="contact-card__icon" aria-hidden="true">
+                <img src="assets/img/contact.png" alt="" />
+              </div>
+
+              <div>
+                <h2 class="contact-card__title">Contact Form</h2>
+                <p class="contact-card__hint">Fill this up and I’ll get back to you.</p>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              data-contact-form
+              action="https://formspree.io/f/mgollnrw"
+              method="POST"
+            >
+              <div class="contact-form__row">
+                <label class="contact-field">
+                  <span class="contact-field__label">Your Name</span>
+                  <input
+                    class="contact-field__input"
+                    type="text"
+                    name="name"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                  />
+                </label>
+
+                <label class="contact-field">
+                  <span class="contact-field__label">Email</span>
+                  <input
+                    class="contact-field__input"
+                    type="email"
+                    name="email"
+                    placeholder="you@gmail.com"
+                    autocomplete="email"
+                    required
+                  />
+                </label>
+              </div>
+
+              <label class="contact-field">
+                <span class="contact-field__label">Subject</span>
+                <input
+                  class="contact-field__input"
+                  type="text"
+                  name="subject"
+                  placeholder="Internship / Project / Collaboration"
+                  required
+                />
+              </label>
+
+              <label class="contact-field">
+                <span class="contact-field__label">Message</span>
+                <textarea
+                  class="contact-field__input contact-field__textarea"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message..."
+                  required
+                ></textarea>
+              </label>
+
+              <input type="hidden" name="_subject" value="New message from Portfolio Contact Form" />
+              <input type="hidden" name="_replyto" value="" />
+
+              <div class="contact-form__actions">
+                <button class="btn btn-primary contact-submit" type="submit">
+                  <span>Send Message</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                  </svg>
+                </button>
+
+                <a class="btn btn-secondary" href="projects-v2.html">
+                  <span>View My Work</span>
+                </a>
+              </div>
+
+              <p class="contact-form__note" role="status" aria-live="polite" data-form-note>
+                Tip: Messages are sent securely via the form service (no email app needed).
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© <span id="year"></span> Adrian M. Anunciacion. All rights reserved.</p>
+
+      <div class="footer-socials">
+        <a
+          href="https://github.com/AdrianM16"
+          target="_blank"
+          aria-disabled="true"
+          class="footer-social"
+          title="GitHub"
+          aria-label="GitHub"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .1-1.5-.5-2 2-.2 4-1 4-4.5 0-1-.4-2-1-2.5.1-.3.5-1.5-.1-3 0 0-1-.3-3.4 1.3-1-.3-2.1-.4-3-.4s-2 .1-3 .4C5.6 5.7 4.6 6 4.6 6c-.6 1.5-.2 2.7-.1 3C4 9.5 3.6 10.5 3.6 11.5c0 3.5 2 4.3 4 4.5-.4.4-.6 1-.5 2V21" />
+          </svg>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/adrian-anunciacion-b51913316/"
+          target="_blank"
+          rel="noreferrer"
+          class="footer-social"
+          title="Linkedin"
+          aria-label="LinkedIn"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const navDots = [...document.querySelectorAll('.nav-dot')];
+
+    const dotMap = navDots
+      .map(dot => {
+        const id = dot.getAttribute('data-section');
+        const section = document.getElementById(id);
+        return { dot, id, section };
+      })
+      .filter(item => item.section);
+
+    navDots.forEach(dot => {
+      const id = dot.getAttribute('data-section');
+      if (!document.getElementById(id)) dot.style.display = "none";
+    });
+
+    const sections = dotMap.map(x => x.section);
+
+    const setActiveDot = (activeId) => {
+      dotMap.forEach(({ dot, id }) => {
+        dot.classList.toggle('active', id === activeId);
+      });
+    };
+
+    dotMap.forEach(({ dot, section, id }) => {
+      dot.addEventListener('click', () => {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActiveDot(id);
+      });
+    });
+
+    const updateActiveDot = () => {
+      if (!sections.length) return;
+
+      const noScroll = document.body.scrollHeight <= window.innerHeight + 40;
+      if (noScroll) {
+        dotMap.forEach((item, idx) => item.dot.style.display = (idx === 0 ? "" : "none"));
+        setActiveDot(dotMap[0].id);
+        return;
+      }
+
+      const fromTop = 140;
+      let current = sections[0].id;
+      let minDist = Infinity;
+
+      sections.forEach(sec => {
+        const dist = Math.abs(sec.getBoundingClientRect().top - fromTop);
+        if (dist < minDist) {
+          minDist = dist;
+          current = sec.id;
+        }
+      });
+
+      setActiveDot(current);
+    };
+
+    const fadeEls = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+    const handleFade = () => {
+      fadeEls.forEach(el => {
+        if (el.classList.contains('is-visible')) return;
+        if (el.getBoundingClientRect().top < window.innerHeight - 90) el.classList.add('is-visible');
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      updateActiveDot();
+      handleFade();
+    });
+
+    window.addEventListener('load', () => {
+      updateActiveDot();
+      handleFade();
+    });
+
+    const form = document.querySelector('[data-contact-form]');
+    const note = document.querySelector('[data-form-note]');
+    const submitBtn = document.querySelector('.contact-submit');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = "0.85";
+        }
+        if (note) note.textContent = "Sending… please wait.";
+
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+          });
+
+          if (res.ok) {
+            form.reset();
+            if (note) note.textContent = "✅ Message sent! Thank you — I’ll reply as soon as I can.";
+          } else {
+            const data = await res.json().catch(() => ({}));
+            const msg = data?.errors?.[0]?.message || "Something went wrong. Please try again.";
+            if (note) note.textContent = "❌ " + msg;
+          }
+        } catch (err) {
+          if (note) note.textContent = "❌ Network error. Please check your internet and try again.";
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+          }
+        }
+      });
+    }
+  </script>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
