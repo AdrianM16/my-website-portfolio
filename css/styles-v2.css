@@ -650,6 +650,11 @@ html.page-ready .top-navbar{ transition: background .25s ease, box-shadow .25s e
 /* =========================
    [12] About Page (Scoped)
 ========================= */
+
+[hidden]{
+  display: none !important;
+}
+
 .page-about .hero.hero--about{
   padding: 110px 5% 40px; /* dagdag top space */
 }
