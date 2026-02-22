@@ -352,6 +352,98 @@
         </div>
       </div>
     </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="stats-section" id="certifications">
+      <div class="stats-container">
+        <div class="stats-header fade-up">
+          <h2 class="stats-title">Certifications & Trainings</h2>
+          <p class="stats-subtitle">Academic-related certificates and workshops I completed</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- NOTE: palitan mo lang yung src ng real images mo -->
+          <button class="cert-card fade-up" type="button"
+            data-cert-open
+            data-cert-src="assets/certificates/cc-rwd.jpg"
+            data-cert-title="Responsive Web Design — freeCodeCamp (Issued September 2024)"
+            aria-label="View certificate: Responsive Web Design — freeCodeCamp">
+            <div class="cert-thumb">
+              <img src="assets/certificates/thumbs/cc-rwd.jpg" alt="Certificate thumbnail - Responsive Web Design (freeCodeCamp)" loading="lazy" />
+              <span class="cert-view">View</span>
+            </div>
+            <div class="cert-body">
+              <div class="cert-name">Responsive Web Design</div>
+              <div class="cert-meta">freeCodeCamp • Issued September 2024</div>
+            </div>
+          </button>
+
+          <button class="cert-card fade-up" type="button"
+            data-cert-open
+            data-cert-src="assets/certificates/simplilearn-uiux.jpg"
+            data-cert-title="Introduction to Graphic Design; Basics of UI/UX — Simplilearn (Issued August 2025)"
+            aria-label="View certificate: Introduction to Graphic Design; Basics of UI/UX — Simplilearn">
+            <div class="cert-thumb">
+              <img src="assets/certificates/thumbs/simplilearn-uiux.jpg" alt="Certificate thumbnail - Introduction to Graphic Design; Basics of UI/UX (Simplilearn)" loading="lazy" />
+              <span class="cert-view">View</span>
+            </div>
+            <div class="cert-body">
+              <div class="cert-name">Intro to Graphic Design; Basics of UI/UX</div>
+              <div class="cert-meta">Simplilearn • Issued August 2025</div>
+            </div>
+          </button>
+
+          <button class="cert-card fade-up" type="button"
+            data-cert-open
+            data-cert-src="assets/certificates/hubspot-content.jpg"
+            data-cert-title="Digital Marketing & Content Marketing — HubSpot Academy (Issued August 2025)"
+            aria-label="View certificate: Digital Marketing & Content Marketing — HubSpot Academy">
+            <div class="cert-thumb">
+              <img src="assets/certificates/thumbs/hubspot-content.jpg" alt="Certificate thumbnail - Digital Marketing & Content Marketing (HubSpot Academy)" loading="lazy" />
+              <span class="cert-view">View</span>
+            </div>
+            <div class="cert-body">
+              <div class="cert-name">Digital Marketing & Content Marketing</div>
+              <div class="cert-meta">HubSpot Academy • Issued August 2025</div>
+            </div>
+          </button>
+
+          <button class="cert-card fade-up" type="button"
+            data-cert-open
+            data-cert-src="assets/certificates/codegeeks-sleek.jpg"
+            data-cert-title="Sleek & Swift — Hands-on Tailwind and Shadcn/UI Workshop — Code Geeks (August 13, 2025)"
+            aria-label="View certificate: Sleek & Swift — Code Geeks">
+            <div class="cert-thumb">
+              <img src="assets/certificates/thumbs/codegeeks-sleek.jpg" alt="Certificate thumbnail - Sleek & Swift Workshop (Code Geeks)" loading="lazy" />
+              <span class="cert-view">View</span>
+            </div>
+            <div class="cert-body">
+              <div class="cert-name">Sleek & Swift (Tailwind + Shadcn/UI)</div>
+              <div class="cert-meta">Code Geeks • August 13, 2025</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERT MODAL -->
+    <div class="cert-modal" data-cert-modal hidden role="dialog" aria-modal="true" aria-label="Certificate Preview">
+      <div class="cert-modal__backdrop" data-cert-close></div>
+
+      <div class="cert-modal__panel" role="document">
+        <button class="cert-modal__close" type="button" data-cert-close aria-label="Close certificate preview">✕</button>
+
+        <div class="cert-modal__head">
+          <h3 class="cert-modal__title" data-cert-modal-title>Certificate</h3>
+          <p class="cert-modal__hint">Click outside or press ESC to close.</p>
+        </div>
+
+        <div class="cert-modal__media">
+          <img data-cert-modal-img src="" alt="" />
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="footer">
@@ -466,6 +558,44 @@
         aboutToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
     }
+
+    /* CERT MODAL JS */
+    const modal = document.querySelector('[data-cert-modal]');
+    const modalImg = document.querySelector('[data-cert-modal-img]');
+    const modalTitle = document.querySelector('[data-cert-modal-title]');
+    const openBtns = document.querySelectorAll('[data-cert-open]');
+    const closeBtns = document.querySelectorAll('[data-cert-close]');
+
+    const openModal = (src, title) => {
+      if (!modal || !modalImg || !modalTitle) return;
+      modalImg.src = src;
+      modalImg.alt = title || 'Certificate preview';
+      modalTitle.textContent = title || 'Certificate';
+      modal.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      requestAnimationFrame(() => modal.classList.add('is-open'));
+    };
+
+    const closeModal = () => {
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      document.documentElement.style.overflow = '';
+      setTimeout(() => {
+        modal.hidden = true;
+        if (modalImg) modalImg.src = '';
+      }, 160);
+    };
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        openModal(btn.getAttribute('data-cert-src'), btn.getAttribute('data-cert-title'));
+      });
+    });
+
+    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
+    });
   </script>
 
   <script src="js/main.js" defer></script>
