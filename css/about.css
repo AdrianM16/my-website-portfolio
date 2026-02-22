@@ -128,8 +128,8 @@
 
     padding: 18px !important;
     border-radius: 22px !important;
-    border: 1px solid rgba(255,255,255,.10) !important;
-    background: linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.02)) !important;
+    border: 1px solid var(--border) !important;
+    background: linear-gradient(135deg, var(--card), rgba(255,255,255,.02)) !important;
     box-shadow: 0 12px 32px rgba(0,0,0,.18) !important;
 
     text-align: center !important;
@@ -216,8 +216,8 @@
     margin: 10px auto 0;
     padding: 10px 16px;
     border-radius: 999px;
-    border: 1px solid rgba(255,255,255,.14);
-    background: rgba(255,255,255,.05);
+    border: 1px solid var(--border);
+    background: var(--surface);
     color: var(--text);
     font-weight: 800;
     font-size: .95rem;
@@ -264,13 +264,14 @@
   margin-top: 18px;
 }
 
+/* Smaller + cleaner cards */
 .page-about .cert-card{
   grid-column: span 6;
   text-align: left;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  box-shadow: 0 12px 32px rgba(0,0,0,.18);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--card), rgba(255,255,255,.02));
+  box-shadow: 0 10px 26px rgba(0,0,0,.14);
   overflow: hidden;
   cursor: pointer;
   padding: 0;
@@ -279,43 +280,54 @@
 
 .page-about .cert-card:hover{
   transform: translateY(-3px);
-  border-color: rgba(139, 92, 246, 0.22);
-  box-shadow: 0 18px 44px rgba(0,0,0,.22);
+  border-color: rgba(var(--primary-rgb), 0.28);
+  box-shadow: 0 16px 38px rgba(0,0,0,.18);
 }
 
 .page-about .cert-thumb{
   position: relative;
+  background: var(--surface);
 }
 
+/* Reduce image height so cards aren’t too tall */
 .page-about .cert-thumb img{
   width: 100%;
-  height: 200px;
+  height: 170px;
   object-fit: cover;
   display: block;
-  transform: scale(1.02);
+  transform: scale(1.01);
   transition: transform .2s ease, filter .2s ease;
   filter: contrast(1.02) saturate(1.03);
 }
 
 .page-about .cert-card:hover .cert-thumb img{
-  transform: scale(1.05);
+  transform: scale(1.04);
   filter: contrast(1.05) saturate(1.05);
 }
 
+/* View pill — readable on both themes */
 .page-about .cert-view{
   position: absolute;
   right: 12px;
   bottom: 12px;
-  padding: 8px 12px;
+  padding: 7px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(10,10,18,.45);
-  backdrop-filter: blur(10px);
-  color: var(--text);
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.35);
+  color: rgba(255,255,255,.92);
   font-weight: 800;
   font-size: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+:root[data-theme="light"] .page-about .cert-view{
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.82);
+  color: rgba(0,0,0,.82);
+}
+
+/* Body text */
 .page-about .cert-body{
   padding: 12px 14px 14px;
 }
@@ -324,6 +336,7 @@
   font-weight: 900;
   font-size: 14px;
   margin-bottom: 6px;
+  color: var(--text);
 }
 
 .page-about .cert-meta{
@@ -335,14 +348,14 @@
 /* Tablet */
 @media (max-width: 980px){
   .page-about .cert-card{ grid-column: span 12; }
-  .page-about .cert-thumb img{ height: 230px; }
+  .page-about .cert-thumb img{ height: 190px; }
 }
 
 /* Mobile */
 @media (max-width: 640px){
   .page-about .cert-grid{ grid-template-columns: 1fr; }
   .page-about .cert-card{ grid-column: auto; }
-  .page-about .cert-thumb img{ height: 210px; }
+  .page-about .cert-thumb img{ height: 175px; }
 }
 
 /* =========================
@@ -361,23 +374,31 @@
 .page-about .cert-modal__backdrop{
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.70);
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  background: rgba(0,0,0,.68);
 }
 
+:root[data-theme="light"] .page-about .cert-modal__backdrop{
+  background: rgba(0,0,0,.55);
+}
+
+/* Slightly smaller panel so it looks balanced */
 .page-about .cert-modal__panel{
   position: relative;
-  width: min(920px, 100%);
-  max-height: 86vh;
+  width: min(760px, 100%);
+  max-height: 84vh;
   overflow: hidden;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  border: 1px solid var(--border);
   background: linear-gradient(135deg, rgba(20,20,32,.92), rgba(12,12,20,.92));
   box-shadow: 0 22px 70px rgba(0,0,0,.45);
-  transform: translateY(10px) scale(.98);
+  transform: translateY(10px) scale(.985);
   opacity: 0;
   transition: transform .16s ease, opacity .16s ease;
+}
+
+:root[data-theme="light"] .page-about .cert-modal__panel{
+  background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(248,250,252,.96));
+  box-shadow: 0 18px 60px rgba(0,0,0,.22);
 }
 
 .page-about .cert-modal.is-open .cert-modal__panel{
@@ -392,8 +413,8 @@
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  background: var(--surface);
   color: var(--text);
   cursor: pointer;
   font-size: 16px;
@@ -408,6 +429,7 @@
   margin: 0 0 4px 0;
   font-size: 15px;
   line-height: 1.25;
+  color: var(--text);
 }
 
 .page-about .cert-modal__hint{
@@ -419,7 +441,7 @@
 .page-about .cert-modal__media{
   padding: 0 16px 16px;
   overflow: auto;
-  max-height: calc(86vh - 76px);
+  max-height: calc(84vh - 76px);
 }
 
 .page-about .cert-modal__media img{
@@ -427,5 +449,6 @@
   height: auto;
   display: block;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.10);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
 }
