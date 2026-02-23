@@ -453,6 +453,7 @@
   background: var(--bg-secondary);
 }
 
+/* Hide Read more / Read less on desktop + show full text */
 @media (min-width: 641px){
   .page-about .about-toggle{
     display: none !important;
@@ -469,6 +470,7 @@
   }
 }
 
+/* Keep it visible on mobile only */
 @media (max-width: 640px){
   .page-about .about-toggle{
     display: inline-flex !important;
