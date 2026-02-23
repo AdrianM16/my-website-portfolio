@@ -452,3 +452,25 @@
   border: 1px solid var(--border);
   background: var(--bg-secondary);
 }
+
+@media (min-width: 641px){
+  .page-about .about-toggle{
+    display: none !important;
+  }
+
+  .page-about .about-copy{
+    max-height: none !important;
+    overflow: visible !important;
+    padding-bottom: 0 !important;
+  }
+
+  .page-about .about-copy::after{
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px){
+  .page-about .about-toggle{
+    display: inline-flex !important;
+  }
+}
