@@ -2,9 +2,6 @@
   const qs = (s, el=document) => el.querySelector(s);
   const qsa = (s, el=document) => [...el.querySelectorAll(s)];
 
-  // ----------------------------
-  // Theme (dark/light)
-  // ----------------------------
   const themeBtn = qs('[data-theme-toggle]');
   const getPreferredTheme = () => {
     const saved = localStorage.getItem('theme');
@@ -19,7 +16,6 @@
   applyTheme(getPreferredTheme());
   themeBtn?.addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    // View Transitions API if supported
     if (document.startViewTransition) {
       document.startViewTransition(() => applyTheme(next));
     } else {
@@ -28,11 +24,7 @@
   });
 
 
-  // ----------------------------
-  // Mobile nav (hamburger)
-  // ----------------------------
   const burger = qs('[data-burger]') || qs('.menu-toggle');
-  // v2 pages use .nav-links, project pages use #drawer.mobile-drawer
   const drawer = qs('[data-drawer]') || qs('#drawer') || qs('.mobile-drawer') || qs('.nav-links');
   const topHeader = qs('.top-navbar');
   const altHeader = qs('.header');
@@ -48,7 +40,6 @@
     if (isTopNav) {
       topHeader?.classList.add('menu-open');
     } else {
-      // Project pages
       altHeader?.classList.add('menu-open');
       if (drawer) {
         drawer.hidden = false;
@@ -77,10 +68,8 @@
     else openMenu();
   });
 
-  // Close when clicking a link (mobile)
   qsa('.nav-links a, .mobile-drawer a, [data-drawer] a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // Close when clicking outside
   document.addEventListener('click', (e) => {
     if (!burger) return;
     if (!isOpen()) return;
@@ -91,23 +80,17 @@
     if (!clickedInsideHeader && !clickedInsideDrawer) closeMenu();
   });
 
-  // Close on ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Close automatically when resizing up to desktop/tablet
   window.addEventListener('resize', () => {
     const cutoff = isTopNav ? 768 : 980;
     if (window.innerWidth > cutoff) closeMenu();
   });
 
-  // Small helper class for entrance animations
   requestAnimationFrame(() => document.documentElement.classList.add('page-ready'));
 
-  // ----------------------------
-  // Reveal on scroll
-  // ----------------------------
   const revealEls = qsa('.reveal');
   if (revealEls.length) {
     const io = new IntersectionObserver((entries) => {
@@ -118,9 +101,6 @@
     revealEls.forEach(el => io.observe(el));
   }
 
-  // ----------------------------
-  // Animate progress bars once visible
-  // ----------------------------
   const bars = qsa('[data-progress]');
   if (bars.length) {
     const io2 = new IntersectionObserver((entries) => {
@@ -142,9 +122,6 @@
     bars.forEach(b => io2.observe(b));
   }
 
-  // ----------------------------
-  // View transitions for page navigation (same-origin)
-  // ----------------------------
   if (document.startViewTransition) {
     qsa('a[data-vt]').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -158,12 +135,6 @@
     });
   }
 
-  // ----------------------------
-  // Contact form (no backend needed)
-  // - validates
-  // - opens mail client with pre-filled body (works offline)
-  // - stores a copy in localStorage as backup
-  // ----------------------------
   const form = qs('[data-contact-form]');
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -189,7 +160,6 @@
       return;
     }
 
-    // Backup copy
     const existing = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
     existing.unshift({ name, email, subject, message, at: new Date().toISOString() });
     localStorage.setItem('contactSubmissions', JSON.stringify(existing.slice(0, 20)));
@@ -202,7 +172,6 @@
       `Hi Adrian,%0D%0A%0D%0A${message}%0D%0A%0D%0A—%0D%0A${name}%0D%0A${email}`
     );
 
-    // mailto is the only universally "functional" option without a server / keys.
     window.location.href = `mailto:${to}?subject=${mailSubject}&body=${mailBody}`;
 
     form.reset();
