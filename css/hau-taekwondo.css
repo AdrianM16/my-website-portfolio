@@ -1,6 +1,4 @@
-/* ==================================================
-   HAU Taekwondo Project Page Styles
-================================================== */
+
 
 .project-page {
   background: #0f0f1a;
@@ -8,7 +6,7 @@
   font-family: system-ui, sans-serif;
 }
 
-/* Gradient background */
+
 .project-page::before {
   content: "";
   position: fixed;
@@ -19,7 +17,7 @@
   z-index: -1;
 }
 
-/* Header */
+
 .project-header {
   padding: 24px 8%;
 }
@@ -34,14 +32,14 @@
   text-decoration: underline;
 }
 
-/* Main */
+
 .project-main {
   padding: 20px 8% 80px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* Card */
+
 .project-card {
   border-radius: 28px;
   padding: 30px;
@@ -55,7 +53,7 @@
   box-shadow: 0 25px 70px rgba(0,0,0,.25);
 }
 
-/* Hero Layout */
+
 .project-hero-top {
   display: flex;
   justify-content: space-between;
@@ -73,7 +71,7 @@
   color: rgba(255,255,255,.7);
 }
 
-/* Tags */
+
 .project-tags {
   margin-top: 16px;
   display: flex;
@@ -91,7 +89,7 @@
   color: #8b5cf6;
 }
 
-/* Buttons */
+
 .project-actions {
   display: flex;
   gap: 10px;
@@ -120,14 +118,14 @@
   color: #fff;
 }
 
-/* Description */
+
 .project-description {
   margin-top: 22px;
   color: rgba(255,255,255,.75);
   line-height: 1.7;
 }
 
-/* Sections */
+
 .project-section {
   margin-top: 60px;
 }
@@ -136,7 +134,7 @@
   margin-bottom: 20px;
 }
 
-/* Grid */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,7 +158,7 @@
   display: block;
 }
 
-/* Footer */
+
 .project-footer {
   padding: 40px;
   text-align: center;
@@ -169,7 +167,7 @@
   margin-top: 60px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: 1fr;
