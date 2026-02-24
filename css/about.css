@@ -1,6 +1,4 @@
-/* =========================
-   ABOUT PAGE (SCOPED)
-========================= */
+
 
 .page-about .hero.hero--about{
   padding: 110px 5% 40px;
@@ -86,7 +84,7 @@
   margin-bottom: 14px;
 }
 
-/* Tablet */
+
 @media (max-width: 980px){
   .page-about .hero-content--about{
     grid-template-columns: 1fr !important;
@@ -110,7 +108,7 @@
   .page-about .hero.hero--about{ padding: 92px 7% 44px; }
 }
 
-/* Mobile */
+
 @media (max-width: 640px){
   .page-about .hero.hero--about{
     padding: 84px 5% 34px;
@@ -253,9 +251,6 @@
   }
 }
 
-/* =========================
-   CERTIFICATIONS
-========================= */
 
 .page-about .cert-grid{
   display: grid;
@@ -264,7 +259,7 @@
   margin-top: 18px;
 }
 
-/* Smaller + cleaner cards */
+
 .page-about .cert-card{
   grid-column: span 6;
   text-align: left;
@@ -289,7 +284,7 @@
   background: var(--surface);
 }
 
-/* Reduce image height so cards aren’t too tall */
+
 .page-about .cert-thumb img{
   width: 100%;
   height: 170px;
@@ -305,7 +300,7 @@
   filter: contrast(1.05) saturate(1.05);
 }
 
-/* View pill — readable on both themes */
+
 .page-about .cert-view{
   position: absolute;
   right: 12px;
@@ -327,7 +322,7 @@
   color: rgba(0,0,0,.82);
 }
 
-/* Body text */
+
 .page-about .cert-body{
   padding: 12px 14px 14px;
 }
@@ -345,22 +340,19 @@
   line-height: 1.45;
 }
 
-/* Tablet */
+
 @media (max-width: 980px){
   .page-about .cert-card{ grid-column: span 12; }
   .page-about .cert-thumb img{ height: 190px; }
 }
 
-/* Mobile */
+
 @media (max-width: 640px){
   .page-about .cert-grid{ grid-template-columns: 1fr; }
   .page-about .cert-card{ grid-column: auto; }
   .page-about .cert-thumb img{ height: 175px; }
 }
 
-/* =========================
-   CERT MODAL
-========================= */
 
 .page-about .cert-modal{
   position: fixed;
@@ -381,7 +373,7 @@
   background: rgba(0,0,0,.55);
 }
 
-/* Slightly smaller panel so it looks balanced */
+
 .page-about .cert-modal__panel{
   position: relative;
   width: min(760px, 100%);
@@ -453,7 +445,7 @@
   background: var(--bg-secondary);
 }
 
-/* Hide Read more / Read less on desktop + show full text */
+
 @media (min-width: 641px){
   .page-about .about-toggle{
     display: none !important;
@@ -470,7 +462,7 @@
   }
 }
 
-/* Keep it visible on mobile only */
+
 @media (max-width: 640px){
   .page-about .about-toggle{
     display: inline-flex !important;
