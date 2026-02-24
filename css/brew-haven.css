@@ -1,7 +1,4 @@
-/* ==================================================
-   Brew Haven Project Page Styles
-   Scoped to .project-page
-================================================== */
+
 
 .project-page {
   background: #0f0f1a;
@@ -9,7 +6,7 @@
   font-family: system-ui, sans-serif;
 }
 
-/* Soft gradient background like v2 */
+
 .project-page::before {
   content: "";
   position: fixed;
@@ -20,7 +17,7 @@
   z-index: -1;
 }
 
-/* Header */
+
 .project-header {
   padding: 24px 8%;
 }
@@ -35,14 +32,14 @@
   text-decoration: underline;
 }
 
-/* Main layout */
+
 .project-main {
   padding: 20px 8% 80px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* Hero card */
+
 .project-card {
   border-radius: 28px;
   padding: 28px;
@@ -56,7 +53,7 @@
   box-shadow: 0 20px 60px rgba(0,0,0,.25);
 }
 
-/* Top hero flex */
+
 .project-hero-top {
   display: flex;
   justify-content: space-between;
@@ -74,7 +71,7 @@
   color: rgba(255,255,255,.7);
 }
 
-/* Tags */
+
 .project-tags {
   margin-top: 16px;
   display: flex;
@@ -92,7 +89,7 @@
   color: #8b5cf6;
 }
 
-/* Buttons */
+
 .project-actions {
   display: flex;
   gap: 10px;
@@ -121,14 +118,14 @@
   color: #fff;
 }
 
-/* Description */
+
 .project-description {
   margin-top: 20px;
   color: rgba(255,255,255,.75);
   line-height: 1.7;
 }
 
-/* Section */
+
 .project-section {
   margin-top: 60px;
 }
@@ -137,7 +134,7 @@
   margin-bottom: 20px;
 }
 
-/* Image grid */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -156,7 +153,7 @@
   display: block;
 }
 
-/* Footer */
+
 .project-footer {
   padding: 40px;
   text-align: center;
@@ -165,7 +162,7 @@
   margin-top: 60px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: 1fr;
